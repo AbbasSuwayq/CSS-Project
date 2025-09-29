@@ -67,17 +67,47 @@ a {
   font-weight: bold;
 }
 
-.link-arrow::after{
-    content:"-->" ;
-    margin-left: 5px;
+.link-arrow::after {
+  content: "-->";
+  margin-left: 5px;
 }
-.link-arrow:hover::after{
-    margin-left: 10px;
-    transition: margin 0.15s;
+.link-arrow:hover::after {
+  margin-left: 10px;
+  transition: margin 0.15s;
 }
 
 @media screen and (min-width: 1024px) {
-    .link-arrow{
-        font-size:1.5rem;
+  .link-arrow {
+    font-size: 1.5rem;
+  }
+}
+
+/* Badges */
+.badge {
+  font-size: 2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  white-space: nowrap; /*to keep the badge always at the same line, no matter what we add in it*/
+}
+
+.badge--primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+.badge--secondary {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+.badge--small{
+    font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .badge{
+        font-size: 1.5rem;
+    }
+    .badge--small{
+        font-size: 1.2rem;
     }
 }
