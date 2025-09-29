@@ -11,6 +11,10 @@ html {
   --color-body: #918ca4;
 }
 
+*,*::after, *::before{
+  box-sizing: border-box;
+}
+
 body {
   font-family: Inter, Arial, Helvetica, sans-serif;
   color: var(--color-body);
@@ -157,4 +161,64 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Buttons */
+
+.btn {
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding: 2rem 3rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+    text-align: center;
+
+}
+
+.btn--primary {
+  color: #fff;
+  background: var(--color-primary);
+}
+.btn--primary:hover{
+  background: #0f5fba;
+}
+
+.btn--secondary {
+ background: var(--color-secondary);
+ color: #fff;
+}
+.btn--secondary:hover{
+  background: #40b1c5;
+}
+
+.btn--accent{
+  background: var(--color-accent);
+  color: #fff;
+}
+.btn--accent:hover{
+  background: #e94920;
+}
+
+.btn--block{
+  width: 100%;
+  display: inline-block;
+}
+.btn--outline{
+  background: #fff;
+  color: var(--color-headings);
+  border: 2px solid var(--color-headings);
+}
+.btn--outline:hover{
+  background: var(--color-headings);
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+.btn{
+  font-size: 1.5rem;
+}
 }
