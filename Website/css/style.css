@@ -9,9 +9,13 @@ html {
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
+  --color-border: #ccc;
+  --border-radius: 30px;
 }
 
-*,*::after, *::before{
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -175,50 +179,91 @@ a {
   padding: 2rem 3rem;
   text-transform: uppercase;
   white-space: nowrap;
-    text-align: center;
-
+  text-align: center;
 }
 
 .btn--primary {
   color: #fff;
   background: var(--color-primary);
 }
-.btn--primary:hover{
+.btn--primary:hover {
   background: #0f5fba;
 }
 
 .btn--secondary {
- background: var(--color-secondary);
- color: #fff;
+  background: var(--color-secondary);
+  color: #fff;
 }
-.btn--secondary:hover{
+.btn--secondary:hover {
   background: #40b1c5;
 }
 
-.btn--accent{
+.btn--accent {
   background: var(--color-accent);
   color: #fff;
 }
-.btn--accent:hover{
+.btn--accent:hover {
   background: #e94920;
 }
 
-.btn--block{
+.btn--block {
   width: 100%;
   display: inline-block;
 }
-.btn--outline{
+.btn--outline {
   background: #fff;
   color: var(--color-headings);
   border: 2px solid var(--color-headings);
 }
-.btn--outline:hover{
+.btn--outline:hover {
   background: var(--color-headings);
   color: #fff;
 }
 
 @media screen and (min-width: 1024px) {
-.btn{
-  font-size: 1.5rem;
+  .btn {
+    font-size: 1.5rem;
+  }
 }
+
+/* Input */
+
+.input {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  color: var(--color-headings);
+  font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
 }
+::placeholder {
+  color: #cdcbd7;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
+    font-size: 1.5rem;
+  }
+}
+
+/* Input group */
+
+.input--group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  box-shadow: 1px 1px 10px var(--color-border);
+  display: flex;
+}
+
+.input--group .input{
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 1rem ;
+}
+
+.input--group .btn{
+  margin: 4px;
+}
+
+
+
